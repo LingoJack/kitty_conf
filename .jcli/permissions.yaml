@@ -1,0 +1,7 @@
+allow_all: false
+allow:
+- Edit
+- Write
+- Bash(git log:*)
+- Bash(git show:*)
+deny: []

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 KITTY_DIR="$HOME/.config/kitty"
 KITTY_CONF="$KITTY_DIR/kitty.conf"
 LIGHT="theme-anthropic-light.conf"
@@ -13,4 +13,4 @@ else
 fi
 
 # 重载 kitty 配置
-kitty @ load-config 2>/dev/null
+kitty @ load-config

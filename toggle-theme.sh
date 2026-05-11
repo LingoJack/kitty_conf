@@ -12,5 +12,8 @@ else
     sed -i '' "s|^include theme-.*\.conf|include $LIGHT|" "$KITTY_CONF"
 fi
 
-# 重载 kitty 配置
-kitty @ load-config
+# 自动发现 kitty socket
+SOCKET=$(ls -t /tmp/kitty-rc-* 2>/dev/null | head -1)
+if [ -n "$SOCKET" ]; then
+    kitty @ --to "unix:$SOCKET" load-config
+fi

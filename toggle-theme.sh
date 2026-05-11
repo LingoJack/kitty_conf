@@ -12,5 +12,5 @@ else
     sed -i '' "s|^include theme-.*\.conf|include $LIGHT|" "$KITTY_CONF"
 fi
 
-# 模拟 ctrl+cmd+, 重载 kitty 配置
-osascript -e 'tell application "System Events" to keystroke "," using {control down, command down}'
+# 重载 kitty 配置
+kitty @ load-config 2>/dev/null
